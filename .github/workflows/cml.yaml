@@ -2,8 +2,7 @@ name: wine-quality-prediction
 on: [push]
 jobs:
   run:
-    runs-on: [self-hosted,cml,gpu]
-    container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    runs-on: [self-hosted]
     steps:
       - uses: actions/checkout@v2
       - name: Train model
