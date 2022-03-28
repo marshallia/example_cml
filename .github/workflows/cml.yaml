@@ -9,7 +9,7 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          apt install -y node npm libcairo2-dev libfontconfig-dev   libgif-dev libjpeg-dev libpango1.0-dev librsvg2-dev
+          apt install -y nodejs npm libcairo2-dev libfontconfig-dev   libgif-dev libjpeg-dev libpango1.0-dev librsvg2-dev
           npm i -g @dvcorg/cml
           
           pip3 install -r requirements.txt
