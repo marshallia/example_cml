@@ -9,7 +9,7 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          
+          pip3 install -r requirements.txt
           python3 train.py
           echo "##MODEL PREDICTIONS" > report.md
           cat metrics.txt >> report.md
