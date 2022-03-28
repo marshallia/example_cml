@@ -9,5 +9,14 @@ jobs:
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo "nvidia-smi" >> report.md
+          
+          python3 train.py
+          echo "##MODEL PREDICTIONS" > report.md
+          cat metrics.txt >> report.md
+          
+          echo "##Data Viz" > report.md
+          cml publish feature_importance.png --md >> report.md
+          cml publish residuals.png --md >> report.md
+          
+          cml publish plot.png --md >> report.md
           cml send-comment report.md
