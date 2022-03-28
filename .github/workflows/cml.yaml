@@ -2,7 +2,7 @@ name: wine-quality-prediction
 on: [push]
 jobs:
   run:
-    runs-on: [self-hosted]
+    runs-on: [self-hosted,cml,gpu]
     steps:
       - uses: actions/checkout@v2
       - name: Train model
