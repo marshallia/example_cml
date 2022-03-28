@@ -11,7 +11,7 @@ jobs:
         run: |
           
           python3 train.py
-          echo "##MODEL PREDICTION" > report.md
+          echo "##MODEL PREDICTIONS" > report.md
           cat metrics.txt >> report.md
           
           echo "##Data Viz" > report.md
